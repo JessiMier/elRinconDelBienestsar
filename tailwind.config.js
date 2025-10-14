@@ -9,6 +9,13 @@ module.exports = {
         'sans': ['Lato', 'sans-serif'],
         'heading': ['Montserrat', 'sans-serif'],
       },
+      
+      colors: {
+        'primary': '#4CAF50',  
+        'secondary': '#FFC107', 
+        'neutral-light': '#F5F5F5', 
+        'neutral-dark': '#424242',   
+      },
     },
   },
   plugins: [],

@@ -30,7 +30,7 @@ const ProductDetail = () => {
         <img 
           src={product.image} 
           alt={product.name} 
-          className="w-full lg:w-1/2 rounded-lg shadow-md" 
+          className="w-full lg:w-1/2 rounded-lg shadow-md object-scale-down" 
         />
         <div className="lg:w-1/2">
           <h1 className="text-4xl font-extrabold text-gray-900 mb-4">{product.name}</h1>

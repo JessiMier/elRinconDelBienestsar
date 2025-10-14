@@ -4,8 +4,7 @@ import { ProductContext } from '../context/ProductContext';
 
 const ProductsList = ({ searchTerm, activeCategory }) => { 
   const { products } = useContext(ProductContext);
-
-  
+ 
   const filteredProducts = products.filter(product => {
     const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = activeCategory === 'All' || product.category === activeCategory;
@@ -13,7 +12,10 @@ const ProductsList = ({ searchTerm, activeCategory }) => {
   });
 
   return (
-    <div className="container mx-auto px-6 py-8">
+    <div className="container mx-auto px-6 py-8"> 
+      <h2 className="text-3xl font-heading font-bold text-neutral-dark mb-8">
+        Explora Nuestros Productos
+      </h2>
       {filteredProducts.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {filteredProducts.map((product, index) => (
@@ -27,7 +29,7 @@ const ProductsList = ({ searchTerm, activeCategory }) => {
           ))}
         </div>
       ) : (
-        <p className="text-center text-xl text-gray-500">No se encontraron productos que coincidan con tu búsqueda.</p>
+        <p className="text-center text-xl text-neutral-dark">No se encontraron productos que coincidan con tu búsqueda.</p>
       )}
     </div>
   );
